@@ -1,13 +1,15 @@
 export default function Home(){
-  let first=923;
-  let second=37;
-  let sum=first+second
+  let ourStyles={color:"gold",
+    backgroundColor:"grey",
+    border:"white",
+    padding:"50px",
+    margin:"50px"}
   
   return (
-    <div>
+    <div style={ourStyles}>
     <h1>A CORPORATIONS</h1>
-    <p>Our company is a leading provider of innovative solutions in the field of technology and software</p>
-    <strong>{sum}</strong>
+    <h3>Our company is a leading provider of innovative solutions in the field of technology and software</h3>
+    <p>The CEO of this company Naseef Muhamad sends his greetings to you all and wishes you enjoy your stay here</p>
   </div>
   )
 }
