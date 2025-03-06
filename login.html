@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sign In - Auth Website</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div id="loading-screen" class="loading-screen hidden">
+    <div class="loading-container">
+      <div class="spinner"></div>
+      <h1 class="loading-text">Loading...</h1>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="card">
+      <div class="card-header">
+        <h2 class="card-title">Sign in</h2>
+        <p class="card-description">Enter your email and password to access your account</p>
+      </div>
+      <form id="login-form" class="login-form">
+        <div class="form-group">
+          <label for="email">Email</label>
+          <input id="email" type="email" placeholder="name@example.com" required>
+        </div>
+        <div class="form-group">
+          <div class="form-row">
+            <label for="password">Password</label>
+            <a href="#" class="forgot-password">Forgot password?</a>
+          </div>
+          <input id="password" type="password" required>
+        </div>
+        <div class="card-footer">
+          <button type="submit" class="button button-primary" id="login-button">Sign in</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <script src="auth.js"></script>
+  <script src="app.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      
+      if (isAuthenticated()) {
+        window.location.href = 'dashboard.html';
+      }
+
+      const loginForm = document.getElementById('login-form');
+      const loadingScreen = document.getElementById('loading-screen');
+      const loginButton = document.getElementById('login-button');
+
+      loginForm.addEventListener('submit', function(e) {
+        e.preventDefault();
+        
+        const email = document.getElementById('email').value;
+        const password = document.getElementById('password').value;
+        
+        
+        loadingScreen.classList.remove('hidden');
+        loginButton.textContent = 'Signing in...';
+        loginButton.disabled = true;
+        
+        
+        setTimeout(() => {
+          signIn(email, password)
+            .then(() => {
+              window.location.href = 'dashboard.html';
+            })
+            .catch(error => {
+              alert('Login failed: ' + error);
+              loginButton.textContent = 'Sign in';
+              loginButton.disabled = false;
+              loadingScreen.classList.add('hidden');
+            });
+        }, 1000);
+      });
+    });
+  </script>
+</body>
+</html>
+
