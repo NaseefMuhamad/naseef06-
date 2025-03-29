@@ -1,0 +1,197 @@
+/* General Page Styling */
+body {
+    background: linear-gradient(135deg, #e0f7fa, #ffffff); /* Soft light blue to beige gradient */
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+  }
+  
+  /* Page Background */
+  .expenses-page {
+    background-color: #f7f7f7;
+    padding: 20px;
+    min-height: 100vh;
+    color: #333;
+  }
+  
+  /* Title Styling */
+  .page-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #FF6347; /* Tomato red for the title */
+    text-align: center;
+    margin-bottom: 30px;
+    font-family: 'Cursive', sans-serif;
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Timeframe Buttons */
+  .timeframe-selector {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-bottom: 30px;
+  }
+  
+  .timeframe-selector button {
+    background-color: #FFD700; /* Yellow for fun */
+    color: white;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .timeframe-selector button:hover {
+    background-color: #FF9800; /* Darker yellow-orange when hovered */
+  }
+  
+  .timeframe-selector .active {
+    background-color: #FF4500; /* Vibrant orange for active button */
+  }
+  
+  /* Expense Category Icons */
+  .expense-icons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+  }
+  
+  .expense-option {
+    background-color: #009688; /* Teal background */
+    color: #ffffff; /* White text */
+    padding: 25px 35px;
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+    font-size: 28px; /* Larger icons */
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    transition: background-color 0.3s ease;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  }
+  
+  .expense-option i {
+    color: #81D4FA; /* Soft blue color for icons */
+    font-size: 36px; /* Larger icon size */
+  }
+  
+  .expense-option:hover {
+    background-color: #00796b; /* Darker teal on hover */
+  }
+  
+  .expense-option.active {
+    background-color: #004d40; /* Darkest teal for active */
+  }
+  
+  /* Custom Category Input */
+  .custom-category-input input {
+    margin-top: 10px;
+    padding: 10px;
+    font-size: 16px;
+    width: 200px;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    background-color: #FFB6C1; /* Light pink background */
+  }
+  
+  /* Expense Form */
+  .expense-form {
+    text-align: center;
+  }
+  
+  .input-field {
+    margin: 10px;
+    padding: 12px;
+    font-size: 16px;
+    width: 200px;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    background-color: #e0f7fa; /* Soft cyan input fields */
+  }
+  
+  /* Add Expense Button */
+  .add-btn {
+    background: linear-gradient(135deg, #FF6347, #FF4500); /* Gradient for action buttons */
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 15px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .add-btn:hover {
+    background-color: #FF4500; /* Vibrant orange on hover */
+  }
+  
+  /* Expense List Table */
+  .expense-list table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    border-radius: 12px;
+    overflow: hidden;
+  }
+  
+  .expense-list th, .expense-list td {
+    padding: 12px 15px;
+    border: 1px solid #ddd;
+    text-align: center;
+  }
+  
+  .expense-list th {
+    background-color: #FF6347; /* Tomato red for table header */
+    color: white;
+  }
+  
+  .expense-list tr:nth-child(even) {
+    background-color: #f9f9f9;
+  }
+  
+  .expense-list tr:nth-child(odd) {
+    background-color: #e1f5fe; /* Light blue for odd rows */
+  }
+  
+  /* Total Expenses Display */
+  .total-expenses {
+    margin-top: 30px;
+    font-size: 22px;
+    font-weight: bold;
+    background-color: #FF6347; /* Tomato red for total */
+    padding: 15px;
+    border-radius: 8px;
+    text-align: center;
+    color: white;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Soft shadow */
+  }
+  
+  /* Section Title Styling */
+  .section-title {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #FF6347; /* Tomato red section title */
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  
+  /* Fun and Playful Button Animation */
+  @keyframes bounce {
+    0%, 100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-10px);
+    }
+  }
+  
+  
+  
